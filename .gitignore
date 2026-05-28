@@ -1,0 +1,68 @@
+# === Python 기본 ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# === Jupyter / Colab ===
+.ipynb_checkpoints/
+
+# === 가상환경 ===
+venv/
+env/
+.venv/
+ENV/
+
+# === 의료 영상 데이터 (local-only, push 안 함) ===
+data/
+datas/
+*.dcm
+*.nii
+*.nii.gz
+
+# === 학습/평가 부산물 ===
+wandb/
+mlruns/
+logs/
+checkpoints/
+outputs/
+*.csv
+*.h5
+*.npz
+*.ckpt
+*.pt
+*.zip
+
+# === 모델 가중치 정책 ===
+# datas/ 아래 가중치는 일반 차단
+datas/**/*.pth
+# 일반 *.npy 는 차단하되 SpiralConv 인덱스 파일은 예외 (모델 동작 필수)
+*.npy
+!models/spiral_9.npy
+# models/*.pth 는 LFS 로 push 하므로 ignore 하지 않음
+
+# === Step 작업 아카이브 (보고서·원본·임시 도구는 local-only) ===
+docs/_archive/local-only/
+
+# === 임시 분석 도구 (Step 작업 흔적, push 안 함) ===
+_scan_*.py
+_step*_*.py
+_step*_*.txt
+*_step_report*.md
+
+# === IDE / 에디터 ===
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === 빌드 산출물 ===
+build/
+dist/
+*.exe
+*.spec~

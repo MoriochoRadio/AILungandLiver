@@ -1,0 +1,16 @@
+# === Git LFS 정책 ===
+# AI 모델 가중치 (각 ~54 MB)
+models/*.pth filter=lfs diff=lfs merge=lfs -text
+
+# 시연 영상 (~29 MB)
+assets/videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
+
+# 발표 자료 / 산출물 PDF (마스킹본, 10 MB 이상)
+docs/*.pptx filter=lfs diff=lfs merge=lfs -text
+docs/*.pdf  filter=lfs diff=lfs merge=lfs -text
+
+# === 줄바꿈 ===
+*.py text eol=lf
+*.md text eol=lf
+*.spec text eol=lf
+*.txt text eol=lf
