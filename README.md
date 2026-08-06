@@ -34,7 +34,7 @@
 | **소속** | 건양대학교 의료IT공학과 |
 | **수업** | 융합설계 및 프로젝트 + **DYC (Design Your Class)** 두 수업 병행 |
 | **팀** | **T.O.P** (Technology Of Prognosis, *"예측 기술"*) — 직전 학기 [LungCT3DNoduleAI](https://github.com/MoriochoRadio/LungCT3DNoduleAI) 와 같은 팀명 |
-| **팀 구성 (5명)** | PM ◯◯◯ / PL ◯◯◯ / CM ◯◯◯ / **QA 김태경 (본인, 학번 20615010)** / ENG ◯◯◯ |
+| **팀 구성 (5명)** | PM ◯◯◯ / PL ◯◯◯ / CM ◯◯◯ / **QA 김태경 (본인)** / ENG ◯◯◯ |
 | **지도교수** | 송◯◯ 교수님 + 김◯◯ 교수님 |
 | **본인 (KimTaeKyoung) 역할** | ★ **QA (Quality Assurance) 단독** — 산출물 품질 관리 · 시스템 위험 요소 관리 · 모델 성능 모니터링 |
 | **★ 역할 변경** | 직전 학기 **PM** (LungCT3DNoduleAI) → 이번 학기 **QA** — *안 해본 역할을 경험하기 위해 자발적으로 선택* |
