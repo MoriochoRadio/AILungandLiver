@@ -323,7 +323,7 @@ from utils.helper import resource_path  # 프로젝트 루트 기준 경로 가�
 직전 학기의 voxel grid + 4-branch CNN (78%) 을 3D mesh + SpiralNet hybrid (93%) 로 표현 자체를 재설계했습니다. mesh 표현이기에 bounding-box 가 아닌 vertex 단위 segmentation 출력이 가능합니다. → [진화 (78%→93%)](#-직전-프로젝트로부터의-진화-78--93) · [모델 구조](#-모델-구조--spiralnet--pointnet--transformer)
 
 **Q2. 폐 코드를 복사해 간 코드를 만든 것 아닌가?**
-아닙니다. 공통 로직을 `BaseCTPipeline` 부모 클래스로 올리고 장기 이름만 넘기는 3계층 OOP 구조라, 다중 부위 확장이 3줄짜리 stub 두 개로 끝납니다. → [시스템 설계](#️-시스템-설계--폐간-통합-oop)
+아닙니다. 공통 로직을 `BaseCTPipeline` 부모 클래스로 올리고 장기 이름만 넘기는 3계층 OOP 구조라, 다중 부위 확장이 3줄짜리 stub 두 개로 끝납니다. → [시스템 설계](#-시스템-설계--폐간-통합-oop)
 
 **Q3. 왜 의료진용이 아니라 환자용인가?**
 기존 AI 솔루션 (VUNO·DEEP:NOID·메디컬아이피·Quibim) 은 모두 의료진 전용이고, 판독 대기 중 환자의 정보 단절이 출발 문제였기 때문입니다. 진단 대체가 아니라 *"진단 전후의 공백을 메우는 참고 도구"* 포지셔닝입니다. → [문제 정의](#-문제-정의) · [솔루션](#-솔루션--l-pot)
