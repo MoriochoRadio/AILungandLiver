@@ -43,8 +43,6 @@
 
 ---
 
----
-
 ## 🔄 직전 프로젝트로부터의 진화 (78% → 93%)
 
 ![Evolution](assets/screenshots/evolution_78_to_93.png)
@@ -312,6 +310,27 @@ from utils.helper import resource_path  # 프로젝트 루트 기준 경로 가�
 ## 📚 참고 자료
 
 발표 slide 14 의 17개 참고문헌 (국가암정보센터 암 사망률 통계, 5년 생존율 보도자료, scanxiety 관련 Cancer Support Community / Cancer.net, 환자 중심 영상 판독 관련 Radiology: AI 저널들, VUNO·Deepnoid·메디컬아이피·Quibim 솔루션 자료 등).
+
+---
+
+## 🎯 면접 대비 — 기술 선택 Q&A
+
+위 서술 곳곳에 흩어져 있는 *"왜 이렇게 만들었나"* 를 면접용으로 압축한 요약입니다. 상세한 근거는 각 링크 섹션에 있습니다.
+
+**Q1. 왜 voxel 대신 mesh 인가?**
+직전 학기의 voxel grid + 4-branch CNN (78%) 을 3D mesh + SpiralNet hybrid (93%) 로 표현 자체를 재설계했습니다. mesh 표현이기에 bounding-box 가 아닌 vertex 단위 segmentation 출력이 가능합니다. → [진화 (78%→93%)](#-직전-프로젝트로부터의-진화-78--93) · [모델 구조](#-모델-구조--spiralnet--pointnet--transformer)
+
+**Q2. 폐 코드를 복사해 간 코드를 만든 것 아닌가?**
+아닙니다. 공통 로직을 `BaseCTPipeline` 부모 클래스로 올리고 장기 이름만 넘기는 3계층 OOP 구조라, 다중 부위 확장이 3줄짜리 stub 두 개로 끝납니다. → [시스템 설계](#️-시스템-설계--폐간-통합-oop)
+
+**Q3. 왜 의료진용이 아니라 환자용인가?**
+기존 AI 솔루션 (VUNO·DEEP:NOID·메디컬아이피·Quibim) 은 모두 의료진 전용이고, 판독 대기 중 환자의 정보 단절이 출발 문제였기 때문입니다. 진단 대체가 아니라 *"진단 전후의 공백을 메우는 참고 도구"* 포지셔닝입니다. → [문제 정의](#-문제-정의) · [솔루션](#-솔루션--l-pot)
+
+**Q4. 왜 PM 다음에 QA 를 했나?**
+안 해본 역할을 경험하기 위해 자발적으로 선택했습니다. PM 으로 직접 겪은 시행착오 (*"AI 모델 지식 부족"*, *"전처리 지식 부족"*) 를 QA 위험 관리 계획서의 *"치명적 위험"* 항목으로 옮겨 적을 수 있었던 것이 역할 변경의 실질적 수확입니다. → [본인 기여](#-본인-기여-kimtaekyoung--qa-단독)
+
+**Q5. 왜 TensorFlow → PyTorch, 웹앱 → 데스크탑 앱 (PyQt6) 인가?**
+전환의 명시적 이유는 당시 산출물에 보존되어 있지 않습니다 (정직 명시). 기록된 사실은, 아키텍처 재설계 (4-branch CNN → SpiralNet hybrid) 와 함께 프레임워크가 `.h5` → `.pth` 로, 인프라가 Jupyter/Colab + Streamlit 웹앱에서 PyQt6 + PyInstaller exe 로 함께 바뀌었다는 것입니다. → [진화 (78%→93%)](#-직전-프로젝트로부터의-진화-78--93)
 
 ---
 
