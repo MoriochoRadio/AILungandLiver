@@ -315,9 +315,9 @@ from utils.helper import resource_path  # 프로젝트 루트 기준 경로 가�
 
 ---
 
-## 🎯 면접 대비 — 기술 선택 Q&A
+## 🎯 기술 선택 Q&A — 왜 이렇게 만들었나
 
-위 서술 곳곳에 흩어져 있는 *"왜 이렇게 만들었나"* 를 면접용으로 압축한 요약입니다. 상세한 근거는 각 링크 섹션에 있습니다.
+위 서술 곳곳에 흩어져 있는 *"왜 이렇게 만들었나"* 를 한곳에 압축한 요약입니다. 상세한 근거는 각 링크 섹션에 있습니다.
 
 **Q1. 왜 voxel 대신 mesh 인가?**
 직전 학기의 voxel grid + 4-branch CNN (78%) 을 3D mesh + SpiralNet hybrid (93%) 로 표현 자체를 재설계했습니다. mesh 표현이기에 bounding-box 가 아닌 vertex 단위 segmentation 출력이 가능합니다. → [진화 (78%→93%)](#-직전-프로젝트로부터의-진화-78--93) · [모델 구조](#-모델-구조--spiralnet--pointnet--transformer)

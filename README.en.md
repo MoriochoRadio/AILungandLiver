@@ -315,9 +315,9 @@ The 17 references on presentation slide 14 (National Cancer Information Center c
 
 ---
 
-## 🎯 Interview Prep — Technology Choice Q&A
+## 🎯 Technology Choice Q&A — Why It Was Built This Way
 
-A summary that condenses the *"why was it built this way"* scattered throughout the sections above into interview form. Detailed evidence is in each linked section.
+A summary that condenses the *"why was it built this way"* scattered throughout the sections above into one place. Detailed evidence is in each linked section.
 
 **Q1. Why mesh instead of voxel?**
 We redesigned the representation itself, from the previous semester's voxel grid + 4-branch CNN (78%) to a 3D mesh + SpiralNet hybrid (93%). Because it is a mesh representation, vertex-level segmentation output is possible instead of bounding boxes. → [Evolution (78%→93%)](#-evolution-from-the-previous-project-78--93) · [Model Architecture](#-model-architecture--spiralnet--pointnet--transformer)
