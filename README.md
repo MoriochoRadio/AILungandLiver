@@ -1,5 +1,7 @@
 # AILungandLiver — 간·폐 CT 이미지의 AI 기반 진단 및 3D 시각화 시스템 (L-POT)
 
+🇰🇷 한국어 · 🇬🇧 [English](README.en.md)
+
 > *AI-Based Diagnosis and 3D Visualization System for Liver and Lung CT Images*
 >
 > 환자가 자신의 간·폐 CT 를 업로드하면 **3D 로 재구성하고 결절 의심 부위를 표시**해주는 PyQt6 데스크탑 앱입니다. 제품명은 **L-POT**. 직전 학기 [LungCT3DNoduleAI](https://github.com/MoriochoRadio/LungCT3DNoduleAI) (폐 only, 정확도 78%) 를 **폐+간 다중 부위로 확장하고 정확도를 93% 로 끌어올린** 후속 프로젝트입니다. 같은 팀 **T.O.P** 에서, 본인은 직전 학기 PM 에 이어 이번엔 **QA (Quality Assurance)** 를 단독으로 맡았습니다. 2025년 2학기 의료IT공학과 *융합설계 및 프로젝트* + *DYC (Design Your Class)* 두 수업 병행 결과물입니다.
